@@ -19,7 +19,7 @@ class P01Test extends FunSpec with DiagrammedAssertions with GeneratorDrivenProp
     it ("should pass scala check") {
       forAll("") { (s: List[Int]) =>
         whenever (s.nonEmpty) {
-          assert(s.last != P01.last(s))
+          assert(s.last == P01.last(s))
         }
       }
     }
